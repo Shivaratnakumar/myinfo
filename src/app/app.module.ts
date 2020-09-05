@@ -8,6 +8,8 @@ import { ProfileModule } from './profile/profile.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
 const routes: Routes = [
   {
     path: '',
@@ -28,9 +30,11 @@ const config: ExtraOptions = {
     RouterModule.forRoot(routes, config),
     ProfileModule,
     HttpClientModule,
-    BrowserAnimationsModule
-  ],
+    BrowserAnimationsModule,
+    
+   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[]
 })
 export class AppModule { }

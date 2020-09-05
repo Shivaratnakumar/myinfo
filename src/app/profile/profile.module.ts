@@ -15,13 +15,17 @@ import { ReferenceComponent } from './reference/reference.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxSpinnerModule } from '../../../node_modules/ngx-spinner';
 import { ProjectsComponent } from './projects/projects.component';
+import { ChartComponent } from './chart/chart.component';
+import { ChartsModule,ThemeService } from 'ng2-charts';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     SnotifyModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ChartsModule
   ],
   declarations: [
     ProfileComponent,
@@ -35,11 +39,13 @@ import { ProjectsComponent } from './projects/projects.component';
     EducationComponent,
     ReferenceComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ChartComponent
   ],
   providers: [
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
-    SnotifyService,
+    SnotifyService,    
+    ThemeService
   ]
 })
 export class ProfileModule { }
